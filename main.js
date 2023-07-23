@@ -106,3 +106,6 @@ window.addEventListener('load', () => {
     list_el.addEventListener('DOMNodeRemoved', checkAndHideTasksHeader);
 });
 
+exports.default = series(scssTask, jsTask, browserSyncServe, watchTask);
+
+exports.build = series(scssTask, jsTask);
